@@ -48,6 +48,7 @@
         <img class="mt-[30px]"
             src="https://mastererp.mylifecompany.com/Resources/Images/Object/Banner9114012025041546_S.jpg" />
     </div>
+
 </template>
 
 <script>
