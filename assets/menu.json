@@ -1,0 +1,107 @@
+{
+    "menu": [
+        [
+            {
+                "GroupID": 3466,
+                "GroupName": "PROMOTION",
+
+                "Slug": "promotion"
+            },
+            {
+                "GroupID": 3402,
+                "GroupName": "OUR PRODUCTS",
+
+                "Slug": "our-products",
+                "Children": [
+                    {
+                        "GroupID": 3403,
+                        "GroupName": "FRESH FOOD",
+
+                        "Slug": "fresh-food",
+                        "Children": [
+                            {
+                                "GroupID": 3406,
+                                "GroupName": "FISH AND SEAFOOD",
+
+                                "Slug": "fresh-food"
+                            },
+                            {
+                                "GroupID": 3407,
+                                "GroupName": "FISH AND SEAFOOD",
+
+                                "Slug": "fresh-food"
+                            },
+                            {
+                                "GroupID": 3407,
+                                "GroupName": "PROCESSED MEAT",
+
+                                "Slug": "PROCESSED-MEAT"
+                            },
+                            {
+                                "GroupID": 3407,
+                                "GroupName": "VEGETABLES",
+
+                                "Slug": "VEGETABLES"
+                            }
+                        ]
+                    },
+                    {
+                        "GroupID": 3404,
+                        "GroupName": "YEN MARKET",
+
+                        "Slug": "yen-market",
+                        "Children": [
+                            {
+                                "GroupID": 3406,
+                                "GroupName": "FISH AND SEAFOOD",
+
+                                "Slug": "fresh-food"
+                            }
+                        ]
+                    },
+                    {
+                        "GroupID": 3405,
+                        "GroupName": "YEN MARKET"
+                    }
+                ]
+            },
+            {
+                "GroupID": 3398,
+                "GroupName": "YEN MARKET MENU"
+            },
+            {
+                "GroupID": 3401,
+                "GroupName": "SEASONAL"
+            }
+        ]
+    ],
+    "slides": [
+        {
+            "url_image": "https://mastererp.mylifecompany.com/Resources/Images/Banner%208.jpg",
+            "url_link": ""
+        },
+        {
+            "url_image": "https://mastererp.mylifecompany.com/Resources/Images/banner%201.jpg",
+            "url_link": ""
+        }
+    ],
+    "banner": [
+        {
+            "url_image": "http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/banner3_1.jpg?1724210132257",
+            "url_link": "#"
+        },
+        {
+            "url_image": "http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/banner3_2.jpg?1724210132257",
+            "url_link": "#"
+        },
+        {
+            "url_image": "http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/banner3_3.jpg?1724210132257",
+            "url_link": "#"
+        }
+    ],
+    "bannerMain": [
+        {
+            "url_main": "https://mastererp.mylifecompany.com/Resources/Images/Object/Banner9114012025041546_S.jpg"
+        }
+    ]
+}
