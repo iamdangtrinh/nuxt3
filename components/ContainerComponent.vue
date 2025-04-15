@@ -1,6 +1,6 @@
 <template>
     <div
-        class="m-auto nav-item-box flex items-center mt-[96px!important] background-main">
+        class="m-auto nav-item-box flex items-center md:mt-[96px!important] background-main">
         <div class="flex nav-item">
             <NuxtImg
                 class="icon-navige"

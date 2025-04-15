@@ -1,9 +1,10 @@
 <template>
     <div class="bg-[#f8f9fa] footer-container">
-        <div class="m-auto container-main">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+        <div class="m-auto container-main md:w-[1320px]">
+            <div
+                class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-6 w-full">
                 <!-- Thông tin liên hệ -->
-                <div>
+                <div class="">
                     <h2 class="text-2xl text-[#000] font-semibold">
                         Thông tin liên hệ
                     </h2>
@@ -40,26 +41,36 @@
                 </div>
 
                 <!-- Kết nối -->
-                <div>
+                <div class="">
                     <h2 class="text-2xl font-semibold text-[#000]">
                         Kết nối với chúng tôi
                     </h2>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-blue-600 text-2xl">
-                            <NuxtImg src="/icons/facebook.webp" alt="" />
+                    <div class="flex gap-[4px] mb-4 mt-1">
+                        <a href="#" class="text-2xl">
+                            <NuxtImg
+                                width="32px"
+                                src="/icons/facebook.webp"
+                                alt="facebook" />
                         </a>
-                        <a href="#" class="text-pink-500 text-2xl">
-                            <NuxtImg src="/icons/instagram.webp" alt="" />
+                        <a href="#" class="text-2xl">
+                            <NuxtImg
+                                width="32px"
+                                src="/icons/instagram.webp"
+                                alt="instagram" />
                         </a>
-                        <a href="#" class="text-red-600 text-2xl">
-                            <NuxtImg src="/icons/youtube.webp" alt="" />
+                        <a href="#" class="text-2xl">
+                            <NuxtImg
+                                width="32px"
+                                src="/icons/youtube.webp"
+                                alt="youtube" />
                         </a>
                     </div>
                     <div>
                         <NuxtImg
                             src="/icons/logo_bct.webp"
                             alt="Đã thông báo Bộ Công Thương"
-                            class="w-[187px]" />
+                            width="187px"
+                            class="w-full max-w-[187px]" />
                     </div>
                 </div>
 
@@ -68,7 +79,8 @@
                     <NuxtImg
                         src="/icons/new_store.webp"
                         alt="Store icon"
-                        class="md:mx-0" />
+                        width="380"
+                        class="w-[274px]" />
                     <p class="text-[#4c4c4c] mt-[0.5rem]">Hệ thống cửa hàng</p>
                 </div>
             </div>
