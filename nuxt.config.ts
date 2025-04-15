@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     components: true,
     pages: true,
     ssr: true,
-    modules: ["@nuxt/ui", "nuxt-lazy-load", "@nuxt/icon", "nuxt-swiper"],
+    modules: ["@nuxt/ui", "nuxt-lazy-load", "@nuxt/icon", ],
     css: ["~/assets/css/main.css"],
     lazyLoad: {
         images: true,
