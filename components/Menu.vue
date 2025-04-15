@@ -1,51 +1,3 @@
-<!-- <template>
-    <ul class="bg-[#f7f7f7] text-sm">
-        <MenuItem
-            v-for="(item, index) in menuItems"
-            :key="index"
-            :item="item"
-            :active-item-id="activeItemId"
-            :open-menu-ids="openMenuIds"
-            @activate="setActiveItem"
-            @toggle-menu="toggleMenu" />
-    </ul>
-</template>
-
-<script setup>
-import menuData from "@/assets/menu.json";
-import { ref } from "vue";
-
-const activeItemId = ref(null);
-const openMenuIds = ref(new Set()); // Use a Set to track multiple open menus
-
-function setActiveItem(id) {
-    activeItemId.value = id;
-}
-
-function toggleMenu(id) {
-    // Toggle this specific menu ID
-    if (openMenuIds.value.has(id)) {
-        // If it's already open, close it and all its children
-        const newOpenMenus = new Set();
-        // Keep only the menus that aren't the toggled menu or its children
-        openMenuIds.value.forEach(menuId => {
-            if (menuId !== id) {
-                newOpenMenus.add(menuId);
-            }
-        });
-        openMenuIds.value = newOpenMenus;
-    } else {
-        // If it's closed, open it
-        const newOpenMenus = new Set(openMenuIds.value);
-        newOpenMenus.add(id);
-        openMenuIds.value = newOpenMenus;
-    }
-}
-
-// Your menu data
-const menuItems = ref(menuData.menu);
-</script> -->
-
 <template>
     <ul class="bg-[#f7f7f7] text-sm">
         <MenuItem
@@ -54,35 +6,118 @@ const menuItems = ref(menuData.menu);
             :item="item"
             :active-item-id="activeItemId"
             :open-menu-ids="openMenuIds"
+            :active-ancestors="activeAncestors"
             @activate="setActiveItem"
             @toggle-menu="toggleMenu" />
     </ul>
 </template>
 
 <script setup>
+// import menuData from "@/assets/menu.json";
+// const flatMenu = menuData.menu;
+// import { ref } from "vue";
+
+// const activeItemId = ref(null);
+// const openMenuIds = ref(new Set());
+
+// const topLevelMenuIds = flatMenu.map((item) => item.GroupID);
+
+// function setActiveItem(id, isActive, isChildActivation = false) {
+//     activeItemId.value = id;
+
+//     activeAncestors.value.clear();
+
+//     if (isActive) {
+//         if (isChildActivation) {
+//             let currentId = id;
+//             while (childToParentMap.value.has(currentId)) {
+//                 const parentId = childToParentMap.value.get(currentId);
+//                 activeAncestors.value.add(parentId);
+//                 currentId = parentId;
+//             }
+//         }
+//     }
+// }
+
+// function toggleMenu(id) {
+//     const isTopLevel = topLevelMenuIds.includes(id);
+
+//     if (openMenuIds.value.has(id)) {
+//         const newOpenMenus = new Set();
+//         openMenuIds.value.forEach((menuId) => {
+//             if (menuId !== id) {
+//                 newOpenMenus.add(menuId);
+//             }
+//         });
+//         openMenuIds.value = newOpenMenus;
+//     } else {
+//         const newOpenMenus = new Set(openMenuIds.value);
+
+//         if (isTopLevel) {
+//             topLevelMenuIds.forEach((topId) => {
+//                 newOpenMenus.delete(topId);
+//             });
+//         }
+
+//         newOpenMenus.add(id);
+//         openMenuIds.value = newOpenMenus;
+//     }
+// }
+
+// const menuItems = ref(flatMenu);
+
 import menuData from "@/assets/menu.json";
 const flatMenu = menuData.menu;
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const activeItemId = ref(null);
-const openMenuIds = ref(new Set()); // Use a Set to track multiple open menus
+const openMenuIds = ref(new Set());
+const activeAncestors = ref(new Set());
+const childToParentMap = ref(new Map());
 
-// Keep track of top-level menu IDs
+// Build the child-to-parent relationship map
+onMounted(() => {
+    buildChildToParentMap(flatMenu);
+});
+
+function buildChildToParentMap(items, parentId = null) {
+    items.forEach((item) => {
+        if (parentId !== null) {
+            childToParentMap.value.set(item.GroupID, parentId);
+        }
+
+        if (item.Children && item.Children.length > 0) {
+            buildChildToParentMap(item.Children, item.GroupID);
+        }
+    });
+}
+
 const topLevelMenuIds = flatMenu.map((item) => item.GroupID);
 
-function setActiveItem(id) {
+function setActiveItem(id, isActive, isChildActivation = false) {
     activeItemId.value = id;
+
+    activeAncestors.value.clear();
+
+    if (isActive) {
+        if (isChildActivation) {
+            let currentId = id;
+            while (childToParentMap.value.has(currentId)) {
+                const parentId = childToParentMap.value.get(currentId);
+                activeAncestors.value.add(parentId);
+                currentId = parentId;
+            }
+        }
+    }
 }
 
 function toggleMenu(id) {
-    // Check if this is a top-level menu item
     const isTopLevel = topLevelMenuIds.includes(id);
+    const parentId = childToParentMap.value.get(id);
 
-    // Toggle this specific menu ID
     if (openMenuIds.value.has(id)) {
-        // If it's already open, close it and all its children
+        // Close this menu
         const newOpenMenus = new Set();
-        // Keep only the menus that aren't the toggled menu or its children
         openMenuIds.value.forEach((menuId) => {
             if (menuId !== id) {
                 newOpenMenus.add(menuId);
@@ -90,13 +125,23 @@ function toggleMenu(id) {
         });
         openMenuIds.value = newOpenMenus;
     } else {
-        // If it's closed, open it
         const newOpenMenus = new Set(openMenuIds.value);
 
-        // If this is a top-level menu, close other top-level menus
+        // Close sibling menus at the same level
         if (isTopLevel) {
+            // For top-level items, close other top-level menus
             topLevelMenuIds.forEach((topId) => {
                 newOpenMenus.delete(topId);
+            });
+        } else if (parentId) {
+            // For non-top-level items, close sibling menus with the same parent
+            openMenuIds.value.forEach((menuId) => {
+                if (
+                    childToParentMap.value.get(menuId) === parentId &&
+                    menuId !== id
+                ) {
+                    newOpenMenus.delete(menuId);
+                }
             });
         }
 
@@ -105,6 +150,5 @@ function toggleMenu(id) {
     }
 }
 
-// Your menu data
 const menuItems = ref(flatMenu);
 </script>

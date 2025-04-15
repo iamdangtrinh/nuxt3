@@ -3,10 +3,12 @@
         <div @click="handleClick">
             <span
                 v-if="item.Children"
-                class="flex text-lg justify-between px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none nav-item-link"
+                class="hover:text-[#ca2628] flex text-lg justify-between px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none nav-item-link"
                 :class="{
-                    'text-[#ca2628]': isActiveItem || hasActiveChild,
-                    'text-black': !isActiveItem && !hasActiveChild,
+                    'text-[#ca2628]':
+                        isActiveItem || hasActiveChild || isActiveAncestor,
+                    'text-black':
+                        !isActiveItem && !hasActiveChild && !isActiveAncestor,
                 }">
                 {{ item.GroupName }}
                 <NuxtImg
@@ -19,7 +21,7 @@
             <a
                 v-else
                 :href="`/category/${item.Slug}`"
-                class="block px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none flex text-lg nav-item-link"
+                class="hover:text-[#ca2628] block px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none flex text-lg nav-item-link"
                 :class="{ 'text-[#ca2628]': isActiveItem }">
                 {{ item.GroupName }}
             </a>
@@ -34,8 +36,11 @@
                 :item="child"
                 :active-item-id="activeItemId"
                 :open-menu-ids="openMenuIds"
+                :active-ancestors="activeAncestors"
+                :parent-id="item.GroupID"
                 @activate="onActivate"
-                @toggle-menu="onToggleMenu" />
+                @toggle-menu="onToggleMenu"
+                @set-active-ancestors="onSetActiveAncestors" />
         </ul>
     </li>
 </template>
@@ -46,62 +51,80 @@ import { ref, computed, watch } from "vue";
 const props = defineProps({
     item: Object,
     activeItemId: Number,
-    openMenuIds: Object, // Set of open menu IDs
+    openMenuIds: Object, 
+    activeAncestors: {
+        type: Object,
+        default: () => new Set(),
+    },
+    parentId: {
+        type: Number,
+        default: null,
+    },
 });
 
-const emit = defineEmits(["activate", "toggle-menu"]);
+const emit = defineEmits(["activate", "toggle-menu", "set-active-ancestors"]);
 
-// Check if this menu is open by looking in the Set
 const isOpen = computed(() => {
     return props.openMenuIds && props.openMenuIds.has(props.item.GroupID);
 });
 
 const hasActiveChildren = ref(false);
 
-// Watch for changes in activeItemId
 watch(
     () => props.activeItemId,
     (newId) => {
-        // If the active ID changes to something else, reset our active children state
         if (newId !== props.item.GroupID) {
             hasActiveChildren.value = false;
         }
     }
 );
 
-// Check if this item is currently active
+const isActiveAncestor = computed(() => {
+    return (
+        props.activeAncestors && props.activeAncestors.has(props.item.GroupID)
+    );
+});
+
 const isActiveItem = computed(() => {
     return props.activeItemId === props.item.GroupID;
 });
 
-// Check if any children are active
 const hasActiveChild = computed(() => {
     return hasActiveChildren.value;
 });
 
-// Handle child item activation
-function onActivate(id, isChildActive) {
-    // Only update active children state if it's for a child of this item
-    if (id !== props.item.GroupID) {
-        hasActiveChildren.value = isChildActive;
+function onSetActiveAncestors(ancestorIds) {
+    if (props.parentId) {
+        const newAncestors = new Set(ancestorIds);
+        newAncestors.add(props.item.GroupID);
+        emit("set-active-ancestors", newAncestors);
     }
-    emit("activate", id, id === props.item.GroupID || isChildActive);
 }
 
-// Handle child menu toggle
+function onActivate(id, isActive, isChildActivation = false) {
+    if (isChildActivation || id !== props.item.GroupID) {
+        hasActiveChildren.value = isActive;
+    }
+
+    emit("activate", id, isActive, isChildActivation);
+}
+
 function onToggleMenu(id) {
     emit("toggle-menu", id);
 }
 
 function handleClick() {
     if (props.item.Children) {
-        // Toggle this menu through the parent
         emit("toggle-menu", props.item.GroupID);
-        // Activate this item
         emit("activate", props.item.GroupID, true);
     } else {
-        // Activate this item without toggling (no children)
         emit("activate", props.item.GroupID, true);
+
+        const ancestors = new Set();
+        if (props.parentId) {
+            ancestors.add(props.parentId);
+            emit("set-active-ancestors", ancestors);
+        }
     }
 }
 </script>
