@@ -65,7 +65,7 @@
 
                 <!-- Hệ thống cửa hàng -->
                 <div class="md:text-left">
-                    <img
+                    <NuxtImg
                         src="/icons/new_store.webp"
                         alt="Store icon"
                         class="md:mx-0" />

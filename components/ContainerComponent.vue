@@ -39,6 +39,7 @@
                 :key="index">
                 <NuxtLink :to="n.url_link">
                     <NuxtImg
+                        width="588px"
                         :src="n.url_image"
                         :alt="n.url_image"
                         class="w-full h-full object-cover rounded-md" />
@@ -51,6 +52,7 @@
     <div class="m-auto flex items-center container-main">
         <NuxtImg
             class="mt-[36px]"
+            width="100%"
             src="/banners/Banner9114012025041546_S.jpg" />
     </div>
 </template>

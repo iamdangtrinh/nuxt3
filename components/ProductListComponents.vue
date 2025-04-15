@@ -14,7 +14,7 @@
                         :key="n">
                         <div class="item-picture">
                             <div class="item-image">
-                                <NuxtImg :src="n.image" :alt="n.name" />
+                                <NuxtImg width="314px" height="314px" :src="n.image" :alt="n.name" />
                             </div>
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">
@@ -64,7 +64,7 @@
                         :key="n">
                         <div class="item-picture">
                             <div class="item-image">
-                                <NuxtImg :src="n.image" :alt="n.name" />
+                                <NuxtImg width="314px" height="314px" :src="n.image" :alt="n.name" />
                             </div>
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">

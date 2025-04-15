@@ -15,7 +15,7 @@
             class="mySwiper p-1">
             <SwiperSlide v-for="n in slides" :key="n">
                 <NuxtLink :to="n.url_link">
-                    <NuxtImg :src="`${n.url_image}`" alt="" class="w-full h-full" />
+                    <NuxtImg :src="`${n.url_image}`" width="1920"  :alt="`${n.url_image}`" class="w-full h-full" />
                 </NuxtLink>
             </SwiperSlide>
         </Swiper>

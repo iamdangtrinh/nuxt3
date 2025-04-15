@@ -3,7 +3,7 @@
         <div class="container-main">
             <div class="header-left">
                 <NuxtImg
-                    src="https://yenmarket.vn/_nuxt/logo-brand.D-hX70gZ.png"
+                    src="/logo-brand.png"
                     alt="Logo"
                     class="lazyLoad logo-brand"
                     width="160px" />
