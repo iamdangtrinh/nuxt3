@@ -2,76 +2,277 @@
     "menu": [
         [
             {
-                "GroupID": 3466,
+                "GroupID": 1000,
                 "GroupName": "PROMOTION",
-
                 "Slug": "promotion"
             },
             {
-                "GroupID": 3402,
+                "GroupID": 1001,
                 "GroupName": "OUR PRODUCTS",
-
                 "Slug": "our-products",
                 "Children": [
                     {
-                        "GroupID": 3403,
+                        "GroupID": 1002,
                         "GroupName": "FRESH FOOD",
-
                         "Slug": "fresh-food",
                         "Children": [
                             {
-                                "GroupID": 3406,
+                                "GroupID": 1003,
                                 "GroupName": "FISH AND SEAFOOD",
-
-                                "Slug": "fresh-food"
+                                "Slug": "fish-and-seafood"
                             },
                             {
-                                "GroupID": 3407,
+                                "GroupID": 1004,
                                 "GroupName": "FISH AND SEAFOOD",
-
-                                "Slug": "fresh-food"
+                                "Slug": "fish-and-seafood"
                             },
                             {
-                                "GroupID": 3407,
+                                "GroupID": 1005,
                                 "GroupName": "PROCESSED MEAT",
-
-                                "Slug": "PROCESSED-MEAT"
+                                "Slug": "processed-meat"
                             },
                             {
-                                "GroupID": 3407,
+                                "GroupID": 1006,
                                 "GroupName": "VEGETABLES",
-
-                                "Slug": "VEGETABLES"
+                                "Slug": "vegetables"
                             }
                         ]
                     },
                     {
-                        "GroupID": 3404,
-                        "GroupName": "YEN MARKET",
-
-                        "Slug": "yen-market",
+                        "GroupID": 1007,
+                        "GroupName": "FROZEN FOOD",
+                        "Slug": "frozen-food",
                         "Children": [
                             {
-                                "GroupID": 3406,
-                                "GroupName": "FISH AND SEAFOOD",
-
-                                "Slug": "fresh-food"
+                                "GroupID": 1008,
+                                "GroupName": "FROZEN MOCHI",
+                                "Slug": "frozen-mochi"
+                            },
+                            {
+                                "GroupID": 1009,
+                                "GroupName": "FROZEN SEAFOOD",
+                                "Slug": "frozen-seafood"
+                            },
+                            {
+                                "GroupID": 1010,
+                                "GroupName": "FROZEN MEAT",
+                                "Slug": "frozen-meat"
+                            },
+                            {
+                                "GroupID": 1011,
+                                "GroupName": "OTHER FROZEN GOODS",
+                                "Slug": "other-frozen-goods"
+                            },
+                            {
+                                "GroupID": 1012,
+                                "GroupName": "FROZEN READY TO COOK",
+                                "Slug": "frozen-ready-to-cook"
+                            },
+                            {
+                                "GroupID": 1013,
+                                "GroupName": "ICE CREAM",
+                                "Slug": "ice-cream"
                             }
                         ]
                     },
                     {
-                        "GroupID": 3405,
-                        "GroupName": "YEN MARKET"
+                        "GroupID": 1014,
+                        "GroupName": "SALTY GROCERY",
+                        "Slug": "salty-grocery",
+                        "Children": [
+                            {
+                                "GroupID": 1015,
+                                "GroupName": "BAKING ESSENTIALS",
+                                "Slug": "baking-essentials"
+                            },
+                            {
+                                "GroupID": 1016,
+                                "GroupName": "CANNED FOOD",
+                                "Slug": "canned-food"
+                            },
+                            {
+                                "GroupID": 1017,
+                                "GroupName": "BUTTER & CHEESE",
+                                "Slug": "butter-cheese"
+                            },
+                            {
+                                "GroupID": 1018,
+                                "GroupName": "DRIED BEANS & VEGETABLES",
+                                "Slug": "dried-beans-vegetables"
+                            },
+                            {
+                                "GroupID": 1019,
+                                "GroupName": "OIL AND VINEGAR",
+                                "Slug": "oil-and-vinegar"
+                            },
+                            {
+                                "GroupID": 1020,
+                                "GroupName": "PASTA AND NOODLES",
+                                "Slug": "pasta-and-noodles"
+                            },
+                            {
+                                "GroupID": 1021,
+                                "GroupName": "READY TO COOK",
+                                "Slug": "ready-to-cook"
+                            },
+                            {
+                                "GroupID": 1022,
+                                "GroupName": "SAUCE AND CONDIMENTS",
+                                "Slug": "sauce-and-condiments"
+                            },
+                            {
+                                "GroupID": 1023,
+                                "GroupName": "SEASONING",
+                                "Slug": "seasoning"
+                            }
+                        ]
+                    },
+                    {
+                        "GroupID": 1024,
+                        "GroupName": "SWEET GROCERY",
+                        "Slug": "sweet-grocery",
+                        "Children": [
+                            {
+                                "GroupID": 1025,
+                                "GroupName": "BISCUITS & CAKES",
+                                "Slug": "biscuits-cakes"
+                            },
+                            {
+                                "GroupID": 1026,
+                                "GroupName": "CANNED FRUITS",
+                                "Slug": "canned-fruits"
+                            },
+                            {
+                                "GroupID": 1027,
+                                "GroupName": "CHOCOLATE & CONFECTIONERY",
+                                "Slug": "chocolate-confectionery"
+                            },
+                            {
+                                "GroupID": 1028,
+                                "GroupName": "MILK",
+                                "Slug": "milk"
+                            },
+                            {
+                                "GroupID": 1029,
+                                "GroupName": "PROCESSED DAIRY PRODUCTS",
+                                "Slug": "processed-dairy-products"
+                            },
+                            {
+                                "GroupID": 1030,
+                                "GroupName": "SNACKS, NUTS AND DRIED FRUITS",
+                                "Slug": "snacks-nuts-dried-fruits"
+                            }
+                        ]
+                    },
+                    {
+                        "GroupID": 1031,
+                        "GroupName": "BEVERAGES",
+                        "Slug": "beverages",
+                        "Children": [
+                            {
+                                "GroupID": 1032,
+                                "GroupName": "BEER",
+                                "Slug": "beer"
+                            },
+                            {
+                                "GroupID": 1033,
+                                "GroupName": "SAKE",
+                                "Slug": "sake"
+                            },
+                            {
+                                "GroupID": 1034,
+                                "GroupName": "UMESHU",
+                                "Slug": "umeshu"
+                            },
+                            {
+                                "GroupID": 1035,
+                                "GroupName": "CHAMPAGNE",
+                                "Slug": "champagne"
+                            },
+                            {
+                                "GroupID": 1036,
+                                "GroupName": "RED WINE",
+                                "Slug": "red-wine"
+                            },
+                            {
+                                "GroupID": 1037,
+                                "GroupName": "ROSE WINE",
+                                "Slug": "rose-wine"
+                            },
+                            {
+                                "GroupID": 1038,
+                                "GroupName": "SPIRITS",
+                                "Slug": "spirits"
+                            },
+                            {
+                                "GroupID": 1039,
+                                "GroupName": "WHITE WINE",
+                                "Slug": "white-wine"
+                            },
+                            {
+                                "GroupID": 1040,
+                                "GroupName": "SOFT DRINKS",
+                                "Slug": "soft-drinks"
+                            },
+                            {
+                                "GroupID": 1041,
+                                "GroupName": "JUICES",
+                                "Slug": "juices"
+                            },
+                            {
+                                "GroupID": 1042,
+                                "GroupName": "COFFEE",
+                                "Slug": "coffee"
+                            },
+                            {
+                                "GroupID": 1043,
+                                "GroupName": "JAPANESE TEA",
+                                "Slug": "japanese-tea"
+                            }
+                        ]
                     }
                 ]
             },
             {
-                "GroupID": 3398,
-                "GroupName": "YEN MARKET MENU"
+                "GroupID": 1044,
+                "GroupName": "YEN MARKET MENU",
+                "Slug": "yen-market-menu",
+                "Children": [
+                    {
+                        "GroupID": 1045,
+                        "GroupName": "YEN's KITCHEN",
+                        "Slug": "fish-and-seafood",
+                        "Children": [
+                            {
+                                "GroupID": 1046,
+                                "GroupName": "BBQ COLLECTION",
+                                "Slug": "bbq-collection"
+                            },
+                            {
+                                "GroupID": 1047,
+                                "GroupName": "FAMILY MEAL",
+                                "Slug": "family-meal"
+                            },
+                            {
+                                "GroupID": 1048,
+                                "GroupName": "SAUCE COLLECTION",
+                                "Slug": "sauce-collection"
+                            }
+                        ]
+                    }
+                ]
             },
             {
-                "GroupID": 3401,
-                "GroupName": "SEASONAL"
+                "GroupID": 1049,
+                "GroupName": "SEASONAL",
+                "Slug": "seasonal",
+                "Children": [
+                    {
+                        "GroupID": 1050,
+                        "GroupName": "LUNAR NEW YEAR",
+                        "Slug": "lunar-new-year"
+                    }
+                ]
             }
         ]
     ],

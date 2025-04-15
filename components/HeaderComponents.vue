@@ -15,7 +15,11 @@
                     type="text"
                     class="input-search"
                     placeholder="Key search" />
-                <NuxtImg class="cursor-pointer" src="/icons/icon-find.svg" alt="" />
+                <NuxtImg
+                    width="20px"
+                    class="cursor-pointer"
+                    src="/icons/icon-find.svg"
+                    alt="" />
             </div>
 
             <div class="header-hotline flex gap-[0.5rem]">
@@ -24,8 +28,8 @@
                     class="icon-primary cursor-pointer"
                     width="33px" />
                 <div class="flex flex-col">
-                    <span class="text-sm font-bold">Hotline</span>
-                    <span class="text-sm font-bold">1900 066 890</span>
+                    <span class="text-base font-bold">Hotline</span>
+                    <span class="text-base font-bold mt-[-2px]">1900 066 890</span>
                 </div>
             </div>
 
@@ -33,11 +37,11 @@
                 <NuxtImg
                     class="icon-primary cursor-pointer"
                     src="/icons/icon-user.svg"
-                    width="33px" />
+                    width="42px" />
 
                 <div class="flex flex-col">
-                    <span class="text-sm font-bold">Hi</span>
-                    <span class="text-sm font-bold">Login</span>
+                    <span class="text-base font-bold">Hi,</span>
+                    <span class="text-base font-bold mt-[-2px]">Login</span>
                 </div>
             </div>
 
