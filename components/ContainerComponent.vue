@@ -30,7 +30,6 @@
     </div>
 
     <div class="container-main">
-        <!-- Mobile: scroll ngang | Desktop: grid -->
         <div
             class="flex md:grid mt-[28px] md:grid-cols-3 gap-4 md:gap-[16px] overflow-x-auto md:overflow-visible md:px-0">
             <div
@@ -51,7 +50,7 @@
     <!-- banner main -->
     <div class="m-auto flex items-center container-main">
         <NuxtImg
-            class="mt-[36px]"
+            class="mt-[36px] w-full"
             width="100%"
             src="/banners/Banner9114012025041546_S.jpg" />
     </div>
