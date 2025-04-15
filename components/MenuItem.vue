@@ -4,7 +4,7 @@
         <div @click="handleClick">
             <span
                 v-if="item.Children"
-                class="block px-4 py-2 hover:bg-gray-200 cursor-pointer select-none"
+                class="flex justify-between px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none"
                 :class="{
                     'text-red-600': item.Children,
                     'text-[#ca2628] flex justify-between ': isActive,
@@ -15,24 +15,23 @@
                     src="/icons/icon-arrow.svg"
                     width="12px"
                     alt="arrow"
-                    :class="{ 'rotate-270': isOpen }" />
+                    class="rotate-270" />
             </span>
 
             <!-- Nếu không có Children, là leaf, thì sử dụng <a> -->
             <a
                 v-else
                 :href="`/category/${item.Slug}`"
-                class="block px-4 py-2 hover:bg-gray-200 cursor-pointer select-none flex"
+                class="block px-4 py-2 hover:bg-[#f7f7f7] cursor-pointer select-none flex"
                 :class="{ 'text-[#ca2628] ': isActive }">
                 {{ item.GroupName }}
-                <img src="/icons/icon-arrow.svg" width="12px" alt="arrow" />
             </a>
         </div>
 
         <!-- Nếu có Children và isOpen true thì hiển thị -->
         <ul
             v-if="item.Children && isOpen"
-            class="absolute top-0 left-full w-48 bg-gray-100 shadow-lg z-10">
+            class="absolute top-0 left-full w-48 bg-[#f7f7f7] shadow-lg z-10">
             <MenuItem
                 v-for="(child, index) in item.Children"
                 :key="index"

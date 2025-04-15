@@ -46,24 +46,18 @@
                     </h2>
                     <div class="flex space-x-4 mb-4">
                         <a href="#" class="text-blue-600 text-2xl">
-                            <img
-                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/facebook.png"
-                                alt="" />
+                            <img src="/public/icons/facebook.webp" alt="" />
                         </a>
                         <a href="#" class="text-pink-500 text-2xl">
-                            <img
-                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/instagram.png"
-                                alt="" />
+                            <img src="/public/icons/instagram.webp" alt="" />
                         </a>
                         <a href="#" class="text-red-600 text-2xl">
-                            <img
-                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/youtube.png"
-                                alt="" />
+                            <img src="/public/icons/youtube.webp" alt="" />
                         </a>
                     </div>
                     <div>
                         <img
-                            src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/logo_bct.png"
+                            src="/public/icons/logo_bct.webp"
                             alt="Đã thông báo Bộ Công Thương"
                             class="w-[187px]" />
                     </div>

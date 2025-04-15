@@ -3,7 +3,7 @@
         <div class="">
             <div class="">
                 <h3
-                    class="color-[#212529] font-bold text-lg mt-[1rem] mb-[1rem]">
+                    class="text-[#212529] uppercase font-bold text-xl mt-[0.9rem] mb-[0.9rem]">
                     Fish and seafood
                 </h3>
 
@@ -51,8 +51,8 @@
             <!-- product 2 -->
             <div class="mt-[12px]">
                 <h3
-                    class="color-[#212529] font-bold text-lg mt-[1rem] mb-[1rem]">
-                    Fish and seafood
+                    class="text-[#212529] uppercase font-bold text-xl mt-[0.9rem] mb-[0.9rem]">
+                    FROZEN MEAT
                 </h3>
 
                 <div class="list-item">
