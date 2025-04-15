@@ -1,6 +1,5 @@
 <template>
     <li class="relative">
-        <!-- Nếu có Children thì là parent -->
         <div @click="handleClick">
             <span
                 v-if="item.Children"
@@ -10,7 +9,6 @@
                     'text-[#ca2628] flex justify-between ': isActive,
                 }">
                 {{ item.GroupName }}
-                <!-- Hiển thị biểu tượng mũi tên, thay đổi khi menu con mở/đóng -->
                 <NuxtImg
                     src="/icons/icon-arrow.svg"
                     width="12px"
@@ -18,7 +16,6 @@
                     class="rotate-270" />
             </span>
 
-            <!-- Nếu không có Children, là leaf, thì sử dụng <a> -->
             <a
                 v-else
                 :href="`/category/${item.Slug}`"
@@ -28,7 +25,6 @@
             </a>
         </div>
 
-        <!-- Nếu có Children và isOpen true thì hiển thị -->
         <ul
             v-if="item.Children && isOpen"
             class="absolute top-0 left-full w-48 bg-[#f7f7f7] shadow-lg z-10">

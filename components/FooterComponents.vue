@@ -46,18 +46,18 @@
                     </h2>
                     <div class="flex space-x-4 mb-4">
                         <a href="#" class="text-blue-600 text-2xl">
-                            <NuxtImg src="/public/icons/facebook.webp" alt="" />
+                            <NuxtImg src="/icons/facebook.webp" alt="" />
                         </a>
                         <a href="#" class="text-pink-500 text-2xl">
-                            <NuxtImg src="/public/icons/instagram.webp" alt="" />
+                            <NuxtImg src="/icons/instagram.webp" alt="" />
                         </a>
                         <a href="#" class="text-red-600 text-2xl">
-                            <NuxtImg src="/public/icons/youtube.webp" alt="" />
+                            <NuxtImg src="/icons/youtube.webp" alt="" />
                         </a>
                     </div>
                     <div>
                         <NuxtImg
-                            src="/public/icons/logo_bct.webp"
+                            src="/icons/logo_bct.webp"
                             alt="Đã thông báo Bộ Công Thương"
                             class="w-[187px]" />
                     </div>
@@ -66,7 +66,7 @@
                 <!-- Hệ thống cửa hàng -->
                 <div class="md:text-left">
                     <img
-                        src="/public/icons/new_store.webp"
+                        src="/icons/new_store.webp"
                         alt="Store icon"
                         class="md:mx-0" />
                     <p class="text-[#4c4c4c] mt-[0.5rem]">Hệ thống cửa hàng</p>

@@ -4,6 +4,8 @@
         <div class="flex nav-item">
             <NuxtImg
                 class="icon-navige"
+                width="20"
+                height="28"
                 src="/icons/icon-navige.svg"
                 alt="navige" />
             <span class="font-bold title-item text-lg">List of item</span>
@@ -49,7 +51,7 @@
     <div class="m-auto flex items-center container-main">
         <NuxtImg
             class="mt-[36px]"
-            src="https://mastererp.mylifecompany.com/Resources/Images/Object/Banner9114012025041546_S.jpg" />
+            src="/banners/Banner9114012025041546_S.jpg" />
     </div>
 </template>
 

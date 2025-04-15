@@ -19,7 +19,7 @@
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">
                                     <NuxtImg
-                                        src="/public/icons/icon-cart.svg"
+                                        src="/icons/icon-cart.svg"
                                         alt="cart"
                                         width="25px"
                                         height="25px" />
@@ -69,7 +69,7 @@
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">
                                     <NuxtImg
-                                        src="/public/icons/icon-cart.svg"
+                                        src="/icons/icon-cart.svg"
                                         alt="cart"
                                         width="25px"
                                         height="25px" />
