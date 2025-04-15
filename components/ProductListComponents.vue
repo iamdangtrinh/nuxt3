@@ -14,11 +14,11 @@
                         :key="n">
                         <div class="item-picture">
                             <div class="item-image">
-                                <img :src="n.image" :alt="n.name" />
+                                <NuxtImg :src="n.image" :alt="n.name" />
                             </div>
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">
-                                    <img
+                                    <NuxtImg
                                         src="/public/icons/icon-cart.svg"
                                         alt="cart"
                                         width="25px"
@@ -64,11 +64,11 @@
                         :key="n">
                         <div class="item-picture">
                             <div class="item-image">
-                                <img :src="n.image" :alt="n.name" />
+                                <NuxtImg :src="n.image" :alt="n.name" />
                             </div>
                             <div class="item-quantity">
                                 <div class="btn-plus bg-primary">
-                                    <img
+                                    <NuxtImg
                                         src="/public/icons/icon-cart.svg"
                                         alt="cart"
                                         width="25px"

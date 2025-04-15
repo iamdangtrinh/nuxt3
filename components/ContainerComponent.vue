@@ -2,7 +2,7 @@
     <div
         class="m-auto nav-item-box flex items-center mt-[96px!important] background-main">
         <div class="flex nav-item">
-            <img
+            <NuxtImg
                 class="icon-navige"
                 src="/icons/icon-navige.svg"
                 alt="navige" />
@@ -36,7 +36,7 @@
                 v-for="(n, index) in bannerData"
                 :key="index">
                 <NuxtLink :to="n.url_link">
-                    <img
+                    <NuxtImg
                         :src="n.url_image"
                         :alt="n.url_image"
                         class="w-full h-full object-cover rounded-md" />
@@ -47,7 +47,7 @@
 
     <!-- banner main -->
     <div class="m-auto flex items-center container-main">
-        <img
+        <NuxtImg
             class="mt-[36px]"
             src="https://mastererp.mylifecompany.com/Resources/Images/Object/Banner9114012025041546_S.jpg" />
     </div>

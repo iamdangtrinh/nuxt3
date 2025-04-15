@@ -11,7 +11,7 @@
                 }">
                 {{ item.GroupName }}
                 <!-- Hiển thị biểu tượng mũi tên, thay đổi khi menu con mở/đóng -->
-                <img
+                <NuxtImg
                     src="/icons/icon-arrow.svg"
                     width="12px"
                     alt="arrow"
