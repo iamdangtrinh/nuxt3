@@ -20,7 +20,9 @@
                                 <div class="btn-plus bg-primary">
                                     <img
                                         src="/public/icons/icon-cart.svg"
-                                        alt="" />
+                                        alt="cart"
+                                        width="25px"
+                                        height="25px" />
                                 </div>
                             </div>
                         </div>
@@ -68,7 +70,9 @@
                                 <div class="btn-plus bg-primary">
                                     <img
                                         src="/public/icons/icon-cart.svg"
-                                        alt="" />
+                                        alt="cart"
+                                        width="25px"
+                                        height="25px" />
                                 </div>
                             </div>
                         </div>
