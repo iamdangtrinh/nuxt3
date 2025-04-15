@@ -1,73 +1,139 @@
 <template>
     <div class="m-auto items-center container-main">
         <div class="">
-            <h3 class="color-[#212529] font-bold text-lg mt-[1rem] mb-[1rem]">
-                Fish and seafood
-            </h3>
+            <div class="">
+                <h3
+                    class="color-[#212529] font-bold text-lg mt-[1rem] mb-[1rem]">
+                    Fish and seafood
+                </h3>
 
-            <div class="list-item">
-                <div class="item-info">
-                    <div class="item-picture">
-                        <div class="item-image">
-                            <img
-                                src="https://mastererp.mylifecompany.com//Resources/Images/Items/28ce2d37-5fc8-49ef-8a99-218c4a5b69c302012025043704.jpg"
-                                alt="" />
-                        </div>
-                        <div class="item-quantity">
-                            <div class="btn-plus bg-primary">
-                                <img src="/public/icons/icon-cart.svg" alt="" />
+                <div class="list-item">
+                    <div
+                        class="item-info"
+                        v-for="n in visibleProductListFish"
+                        :key="n">
+                        <div class="item-picture">
+                            <div class="item-image">
+                                <img :src="n.image" :alt="n.name" />
+                            </div>
+                            <div class="item-quantity">
+                                <div class="btn-plus bg-primary">
+                                    <img
+                                        src="/public/icons/icon-cart.svg"
+                                        alt="" />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item-name">
-                        <div class="product-name text-lg font-bold">
-                            Bạch tuộc sốt wasabi (tako wasabi)
-                        </div>
-                        <div class="product-price">
-                            <span class="price">702.000</span>
-                            <span class="currency">/ kg</span>
+                        <div class="item-name">
+                            <div
+                                class="product-name text-lg font-bold line-clamp-2 overflow-hidden text-ellipsis">
+                                {{ n.name }}
+                            </div>
+
+                            <div class="product-price">
+                                <span class="price">{{
+                                    formatCurrency(n.price)
+                                }}</span>
+                                <span class="currency">/ {{ n.currency }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="item-info">
-                    <div class="item-picture">
-                        <div class="item-image">
-                            <img
-                                src="https://mastererp.mylifecompany.com//Resources/Images/Items/28ce2d37-5fc8-49ef-8a99-218c4a5b69c302012025043704.jpg"
-                                alt="" />
-                        </div>
-                        <div class="item-quantity">
-                            <div class="btn-plus bg-primary">
-                                <img src="/public/icons/icon-cart.svg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-name">
-                        <div class="product-name text-lg font-bold">
-                            Bạch tuộc sốt wasabi (tako wasabi)
-                        </div>
-                        <div class="product-price">
-                            <span class="price">1.000.000</span>
-                            <span class="currency">đ</span>
-                        </div>
+
+                <!-- see all -->
+                <div class="button-see-all">
+                    <div class="see-all mt-[16px]">
+                        <p href="" class="see-all-button">See all</p>
                     </div>
                 </div>
             </div>
 
-            <!-- see all -->
-            <div class="button-see-all">
-                <div class="see-all mt-[16px]">
-                    <p href="" class="see-all-button">See all</p>
+            <!-- product 2 -->
+            <div class="mt-[12px]">
+                <h3
+                    class="color-[#212529] font-bold text-lg mt-[1rem] mb-[1rem]">
+                    Fish and seafood
+                </h3>
+
+                <div class="list-item">
+                    <div
+                        class="item-info"
+                        v-for="n in visibleProductListMeat"
+                        :key="n">
+                        <div class="item-picture">
+                            <div class="item-image">
+                                <img :src="n.image" :alt="n.name" />
+                            </div>
+                            <div class="item-quantity">
+                                <div class="btn-plus bg-primary">
+                                    <img
+                                        src="/public/icons/icon-cart.svg"
+                                        alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <div
+                                class="product-name text-lg font-bold line-clamp-2 overflow-hidden text-ellipsis">
+                                {{ n.name }}
+                            </div>
+                            <div class="product-price">
+                                <span class="price">{{
+                                    formatCurrency(n.price)
+                                }}</span>
+                                <span class="currency">/ {{ n.currency }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- see all -->
+                <div class="button-see-all">
+                    <div class="see-all mt-[16px]">
+                        <p href="" class="see-all-button">See all</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="mb-[100px]"></div>
         </div>
     </div>
 </template>
 
 <script>
+import productList from "@/assets/menu.json";
+
 export default {
     name: "ProductListComponents",
+    data() {
+        return {
+            productListData: productList.productsListFish,
+            productsListMeat: productList.productsListMeat,
+            isMobile: false,
+        };
+    },
+    computed: {
+        visibleProductListFish() {
+            return this.isMobile
+                ? this.productListData.slice(0, 4)
+                : this.productListData;
+        },
+
+        visibleProductListMeat() {
+            return this.isMobile
+                ? this.productsListMeat.slice(0, 4)
+                : this.productsListMeat;
+        },
+    },
+    mounted() {
+        this.isMobile = window.innerWidth <= 768;
+        window.addEventListener("resize", this.checkMobile);
+    },
+    beforeDestroy() {
+        window.removeEventListener("resize", this.checkMobile);
+    },
+    methods: {
+        checkMobile() {
+            this.isMobile = window.innerWidth <= 768;
+        },
+    },
 };
 </script>

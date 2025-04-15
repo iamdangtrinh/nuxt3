@@ -1,16 +1,22 @@
 <template>
     <div class="bg-[#f8f9fa] footer-container">
         <div class="m-auto container-main">
-            <div class="flex justify-between w-full">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                 <!-- Thông tin liên hệ -->
                 <div>
-                    <h2 class="text-2xl text-[#000] font-semibold">Thông tin liên hệ</h2>
+                    <h2 class="text-2xl text-[#000] font-semibold">
+                        Thông tin liên hệ
+                    </h2>
                     <p>
-                        <strong class="font-semibold info-address">Địa chỉ:</strong>
+                        <strong class="font-semibold info-address"
+                            >Địa chỉ:</strong
+                        >
                         92 Nguyễn Trọng Tuyển, Phường 15, Phú Nhuận, TP.HCM
                     </p>
                     <p>
-                        <strong class="font-semibold info-address">Email:</strong>
+                        <strong class="font-semibold info-address"
+                            >Email:</strong
+                        >
                         <a
                             href="mailto:yenmarket@mylifecompany.com.vn"
                             class="text-blue-600 hover:text-[#0d6efd]"
@@ -18,7 +24,9 @@
                         >
                     </p>
                     <p>
-                        <strong class="font-semibold info-address">Hotline:</strong>
+                        <strong class="font-semibold info-address"
+                            >Hotline:</strong
+                        >
                         <a
                             href="tel:1900066890"
                             class="text-blue-600 hover:text-[#0d6efd]"
@@ -37,30 +45,36 @@
                         Kết nối với chúng tôi
                     </h2>
                     <div class="flex space-x-4 mb-4">
-                        <a href="#" class="text-blue-600 text-2xl"
-                            ><i class="fab fa-facebook-square"></i
-                        ></a>
-                        <a href="#" class="text-pink-500 text-2xl"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
-                        <a href="#" class="text-red-600 text-2xl"
-                            ><i class="fab fa-youtube"></i
-                        ></a>
+                        <a href="#" class="text-blue-600 text-2xl">
+                            <img
+                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/facebook.png"
+                                alt="" />
+                        </a>
+                        <a href="#" class="text-pink-500 text-2xl">
+                            <img
+                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/instagram.png"
+                                alt="" />
+                        </a>
+                        <a href="#" class="text-red-600 text-2xl">
+                            <img
+                                src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/youtube.png"
+                                alt="" />
+                        </a>
                     </div>
                     <div>
                         <img
                             src="http://bizweb.dktcdn.net/100/382/166/themes/900578/assets/logo_bct.png"
                             alt="Đã thông báo Bộ Công Thương"
-                            class="w-32" />
+                            class="w-[187px]" />
                     </div>
                 </div>
 
                 <!-- Hệ thống cửa hàng -->
-                <div class="">
+                <div class="md:text-left">
                     <img
                         src="/public/icons/new_store.webp"
                         alt="Store icon"
-                        class="mx-auto" />
+                        class="md:mx-0" />
                     <p class="text-[#4c4c4c] mt-[0.5rem]">Hệ thống cửa hàng</p>
                 </div>
             </div>

@@ -103,5 +103,113 @@
         {
             "url_main": "https://mastererp.mylifecompany.com/Resources/Images/Object/Banner9114012025041546_S.jpg"
         }
+    ],
+    "productsListFish": [
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/28ce2d37-5fc8-49ef-8a99-218c4a5b69c302012025043704.jpg",
+            "name": "Bạch tuộc sốt wasabi (tako wasabi)",
+            "price": 702000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Cá Hồi Nguyên con17122024050223.png",
+            "name": "Cá hồi Nauy nguyên con tươi (Salmon)",
+            "price": 618000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/SP000902-PD00052-WEB_Ca-Hoi-Phi-Le-Phan-Than17122024035448.png",
+            "name": "Cá hồi Nauy tươi Fillet (Salmon)",
+            "price": 948000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/YSEXTF00728112023114821_S17122024032008.jpg",
+            "name": "Đầu cá hồi (Salmon)",
+            "price": 98000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Lườn Cá hồi Nauy tươi (Salmon)17122024041523.jpg",
+            "name": "Lườn Cá hồi Nauy tươi (Salmon)",
+            "price": 178000,
+            "currency": "box"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Trứng cá tuyết tẩm gia vị Mentaiko {YAMAYA}-80g19122024024928.jpg",
+            "name": "Trứng cá tuyết tẩm gia vị Mentaiko {YAMAYA}-80g",
+            "price": 128000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Xương cá Hồi17122024034743.jpg",
+            "name": "Xương cá hồi",
+            "price": 58000,
+            "currency": "Kg"
+        }
+    ],
+    "productsListMeat": [
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Ba chỉ bò Mỹ cuộn 500g19122024054738.jpg",
+            "name": "Ba chỉ bò Mỹ cuộn 500g",
+            "price": 189000,
+            "currency": "Khay"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Ba rọi cuộn (Iberico roll Belly) - Khay 300gr31122024054847.jpg",
+            "name": "Ba rọi cuộn (Iberico roll Belly) - Khay 300gr",
+            "price": 168000,
+            "currency": "Khay"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Bánh nhân bạch tuộc Takoyaki 12kg (40x30g)19122024075236.jpg",
+            "name": "Bánh nhân bạch tuộc Takoyaki 1.2kg (40x30g)",
+            "price": 235000,
+            "currency": "Túi"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Bánh Nhân Bạch Tuộc Takoyaki (2)19122024074330.jpg",
+            "name": "Bánh nhân bạch tuộc Takoyaki túi 1kg",
+            "price": 189000,
+            "currency": "Túi"
+        },
+        
+        
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/%C4%90%E1%BA%A7u%20Th%C4%83n%20Ngo%E1%BA%A1i%20B%C3%B2%20Hokubee%20%C3%9Ac%20%C4%90%C3%B4ng%20L%E1%BA%A1nh%20300G31122024055105.png",
+            "name": "Đầu Thăn Ngoại Bò Hokubee Úc Đông Lạnh 300G",
+            "price": 349000,
+            "currency": "Khay"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/IB Jowl Meat Thịt diềm má 300grkhay31122024055316.jpg",
+            "name": "IB Jowl Meat Thịt diềm má 300gr/khay",
+            "price": 282000,
+            "currency": "Khay"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/Lõi nạc vai bò (top blade) Mỹ cắt steak 500g31122024055634.jpg",
+            "name": "IB Jowl Meat Thịt diềm má 300gr/khay",
+            "price": 189000,
+            "currency": "Khay"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/常陸和牛102012025112230.jpg",
+            "name": "Thăn Ngoại Bò Hitachi A5 (Sirloin)",
+            "price": 4980000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/ba-chi-cuon-bo-my02012025102223.jpg",
+            "name": "Thịt ba rọi Bò Mỹ cắt sẵn 500gr",
+            "price": 358000,
+            "currency": "Kg"
+        },
+        {
+            "image": "https://mastererp.mylifecompany.com//Resources/Images/Items/iberico02012025101926.jpg",
+            "name": "Thịt diềm thăn (IB Serecto Penceta)",
+            "price": 258000,
+            "currency": "Khay"
+        }
     ]
 }

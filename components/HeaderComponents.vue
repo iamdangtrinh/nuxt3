@@ -5,7 +5,7 @@
                 <img
                     src="https://yenmarket.vn/_nuxt/logo-brand.D-hX70gZ.png"
                     alt="Logo"
-                    class="lazyLoad"
+                    class="lazyLoad logo-brand"
                     width="160" />
             </div>
 
